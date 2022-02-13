@@ -8,9 +8,10 @@
 
 body {
   height: 100vh;
+  /* border: 20px solid black; */
   background: url("C:/Pretzel/vanila js/Momentum-clone/img/3.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   margin: 0px;
 }
