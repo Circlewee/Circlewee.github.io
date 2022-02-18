@@ -1,3 +1,7 @@
+@import "variables.css";
+@import "reset.css";
+@import "todo.css";
+
 #login-form {
   font-size: 100px;
 }
@@ -15,6 +19,7 @@
 
 #greeting {
   top: 34%;
+  font-size: 30px;
 }
 
 #clock {
@@ -23,37 +28,13 @@
   margin-bottom: 30px;
 }
 
-/* todo list */
-#todo {
-  top: 34%;
-}
-
-#todo-list {
-  padding: 0px;
-}
-
-#todo-list li {
-  margin-bottom: 5px;
-}
-
-#todo-list li button {
-  background-color: inherit;
-  border: none;
-  margin-left: 8px;
-}
-
-#todo-form input {
-  height: 30px;
-  font-size: 20px;
-}
-
 #login-form input {
   height: 70px;
   font-size: 70px;
 }
 
 #quote {
-  top: 90%;
+  top: 92%;
   left: 50%;
   transform: translate(-50%);
 }
@@ -88,7 +69,7 @@
 /* background */
 body {
   height: 97vh;
-  color: white;
+  color: var(--default-font-color);
   text-align: center;
   margin: 0px;
 }
@@ -109,7 +90,7 @@ body::after {
 
 input[type="text"] {
   width: 270px;
-  color: white;
+  color: var(--default-font-color);
   background-color: transparent;
   border-top: none;
   border-right: none;
@@ -118,6 +99,6 @@ input[type="text"] {
 }
 
 input[type="text"]::placeholder {
-  color: white;
+  color: var(--default-font-color);
   font-size: 20px;
 }

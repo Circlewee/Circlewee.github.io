@@ -1,13 +1,11 @@
-
 const clock = document.querySelector("#clock");
 
 function getClock() {
   const date = new Date();
   const hours = makePadStyle(date.getHours());
   const minutes = makePadStyle(date.getMinutes());
-  const seconds = makePadStyle(date.getSeconds());
-  
-  clock.innerText = `${hours}:${minutes}:${seconds}`;
+
+  clock.innerText = `${hours}:${minutes}`;
 }
 
 function makePadStyle(input) {
