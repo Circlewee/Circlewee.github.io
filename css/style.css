@@ -1,10 +1,9 @@
-@import "variables.css";
 @import "reset.css";
-@import "todo.css";
+@import "variables.css";
 
-#login-form {
-  font-size: 100px;
-}
+@import "classes.css";
+@import "todo.css";
+@import "loginform.css";
 
 #afterlogin {
   height: 100%;
@@ -18,7 +17,8 @@
 }
 
 #greeting {
-  top: 34%;
+  top: 3%;
+  left: 3%;
   font-size: 30px;
 }
 
@@ -28,42 +28,10 @@
   margin-bottom: 30px;
 }
 
-#login-form input {
-  height: 70px;
-  font-size: 70px;
-}
-
 #quote {
   top: 92%;
   left: 50%;
   transform: translate(-50%);
-}
-
-.inlineblock {
-  display: inline-block;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.margin0 {
-  margin: 0px;
-}
-
-.hidden {
-  display: none;
-}
-
-.center {
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* background */
@@ -78,7 +46,8 @@ body::after {
   height: 100vh;
   width: 100vw;
   content: "";
-  background: url("C:/Pretzel/vanila js/Momentum-clone/assets/img/3.jpg") no-repeat center center/cover;
+  background-color: black;
+  /* background: url("../assets/img/3.jpg") no-repeat center center/cover; */
   opacity: 0.7;
   /* 가상 요소 배경이 페이지 전체를 차지 */
   position: absolute;
