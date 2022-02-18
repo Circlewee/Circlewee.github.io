@@ -1,17 +1,123 @@
+#login-form {
+  font-size: 100px;
+}
+
+#afterlogin {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+#weather {
+  top: 3%;
+  right: 5%;
+}
+
+#greeting {
+  top: 34%;
+}
+
 #clock {
-  text-align: center;
+  top: 34%;
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+
+/* todo list */
+#todo {
+  top: 34%;
+}
+
+#todo-list {
+  padding: 0px;
+}
+
+#todo-list li {
+  margin-bottom: 5px;
+}
+
+#todo-list li button {
+  background-color: inherit;
+  border: none;
+  margin-left: 8px;
+}
+
+#todo-form input {
+  height: 30px;
+  font-size: 20px;
+}
+
+#login-form input {
+  height: 70px;
+  font-size: 70px;
+}
+
+#quote {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.inlineblock {
+  display: inline-block;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.margin0 {
+  margin: 0px;
 }
 
 .hidden {
   display: none;
 }
 
+.center {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* background */
 body {
-  height: 100vh;
-  /* border: 20px solid black; */
-  background: url("C:/Pretzel/vanila js/Momentum-clone/img/3.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  height: 97vh;
+  color: white;
+  text-align: center;
   margin: 0px;
+}
+
+body::after {
+  height: 100vh;
+  width: 100vw;
+  content: "";
+  background: url("C:/Pretzel/vanila js/Momentum-clone/assets/img/3.jpg") no-repeat center center/cover;
+  opacity: 0.7;
+  /* 가상 요소 배경이 페이지 전체를 차지 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* 다른 html요소 뒤로 이동 */
+  z-index: -1;
+}
+
+input[type="text"] {
+  width: 270px;
+  color: white;
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 5px solid white;
+}
+
+input[type="text"]::placeholder {
+  color: white;
+  font-size: 20px;
 }
