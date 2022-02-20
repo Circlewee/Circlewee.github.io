@@ -6,10 +6,6 @@
   position: relative;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .margin0 {
   margin: 0px;
 }
@@ -22,20 +18,52 @@
   text-align: right;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 .defaultBlockSize {
   width: calc(100%/3);
 }
 
+.logoutButton {
+  height: 32px;
+  width: 32px;
+  padding: 0px;
+  border: none;
+  background: url( "../assets/img/logout.png" ) no-repeat;
+  cursor: pointer;
+}
+
+.linkSpan{
+  font-size: 30px;
+  border: none;
+  margin-bottom: 15px;
+  color: var(--default-font-color);
+  background-color: var(--inherit-color);
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.linkSpan:last-child{
+  margin-bottom: 0px;
+}
+
 .container {
   height: 82%;
-  width: 100%;
   padding: 84px 0px 84px 0px;
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
 }
 
-.hidden {
-  display: none;
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }

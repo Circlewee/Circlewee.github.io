@@ -9,46 +9,45 @@
   </head>
 
   <body>
-    <div id="background">
-      <form id="login-form" class="hidden center">
-        <span id="hello">Hello, </span>
-        <input required maxlength="15" type="text" placeholder="What is your name?" />
-        <button></button>
-      </form>
+    <form id="login-form" class="center hidden">
+      <span id="hello">Hello, </span>
+      <input required maxlength="15" type="text" placeholder="What is your name?" />
+      <button type="submit"></button>
+    </form>
 
-      <div id="afterlogin" class="hidden margin0 container">
-        <div id="leftblock" class="defaultBlockSize">
-          <div></div>
-        </div>
-        <div id="centerblock" class="defaultBlockSize">
-          <h1 id="clock" class="relative margin0 textcenter">00:00</h1>
-          <h1 id="greeting" class="relative margin0 textcenter"></h1>
-          <div id="weather" class="relative textcenter">
-            <span></span>
-          </div>
-        </div>
-        <div id="rightblock" class="defaultBlockSize">
-          <div id="todo" class="relative">
-            <form id="todo-form" class="margin0">
-              <input type="text" placeholder="Write a To Do and Press Enter" required />
-            </form>
-            <ul id="todo-list"></ul>
-          </div>
+    <div id="afterlogin" class="margin0 container hidden">
+      <div id="leftblock" class="defaultBlockSize"></div>
+      <div id="centerblock" class="defaultBlockSize">
+        <h1 id="clock" class="margin0 textcenter">00:00</h1>
+        <h1 id="greeting" class="margin0 textcenter">
+          <span></span>
+          <button class="logoutButton"></button>
+        </h1>
+        <div id="weather" class="textcenter">
+          <span></span>
         </div>
       </div>
-
-      <div id="quotes" class="hidden textcenter">
-        <span></span><br />
-        <span></span>
+      <div id="rightblock" class="defaultBlockSize">
+        <div id="todo">
+          <form id="todo-form" class="margin0">
+            <input type="text" placeholder="Write a To Do and Press Enter" required />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
       </div>
     </div>
 
+    <div id="quotes" class="textcenter hidden">
+      <div></div>
+      <div></div>
+    </div>
+
+    <script src="js/background.js"></script>
+    <script src="js/linkbutton.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-    <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
-    <script src="assets/json/quotes.json" type="text/javascript"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/quotes.js"></script>
   </body>
 </html>

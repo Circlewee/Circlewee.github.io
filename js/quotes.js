@@ -28,8 +28,8 @@ const quotesList = [
 const quotesClasslist = document.querySelector("#quotes").classList;
 
 if (!quotesClasslist.contains("hidden")) {
-  const quote = document.querySelector("#quotes span:first-child");
-  const author = document.querySelector("#quotes span:last-child");
+  const quote = document.querySelector("#quotes div:first-child");
+  const author = document.querySelector("#quotes div:last-child");
   const todayQuote = quotesList[Math.floor(Math.random() * quotesList.length)];
 
   quote.innerText = `"${todayQuote.quote}"`;

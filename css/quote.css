@@ -1,7 +1,10 @@
-#quote {
-  height: 30%;
+#quotes {
+  position: absolute;
+  left: 50%;
+  bottom: 2%;
+  transform: translateX(-50%);
 }
 
-#quote span:first-child {
-  margin-bottom: 7px;
+#quotes div:first-child {
+  margin-bottom: 10px;
 }

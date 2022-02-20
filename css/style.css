@@ -12,46 +12,12 @@
 }
 
 #greeting {
-  font-size: 30px;
+  font-size: 32px;
   margin-top: 50px;
 }
 
 #clock {
   font-size: 150px;
-}
-
-#leftblock {
-
-}
-
-#centerblock {
-  
-}
-
-/* #rightblock {
-
-} */
-
-#background {
-  height: 100%;
-  width: 100%;
-  content: "";
-  background-color: black;
-  background: url("../assets/img/3.jpg") no-repeat center center/cover;
-  opacity: 0.7;
-  /* 가상 요소 배경이 페이지 전체를 차지 */
-  /* position: absolute; */
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* 다른 html요소 뒤로 이동 */
-  /* 현재 z-index를 활성화하면 todo입력이 제한됌 */
-  /* z-index: -1; */
-}
-
-#background::after {
-  content: "";
-  z-index: -1;
 }
 
 /* background */
@@ -63,7 +29,7 @@ body {
 }
 
 input[type="text"] {
-  width: 270px;
+  width: 300px;
   color: var(--default-font-color);
   background-color: transparent;
   border-top: none;
