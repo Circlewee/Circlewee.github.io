@@ -4,33 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="css/style.css" />
     <title>Your Coding Life!</title>
   </head>
 
   <body>
-    <form id="login-form" class="hidden center">
-      <span id="hello">Hello, </span>
-      <input required maxlength="15" type="text" placeholder="What is your name?" />
-      <button></button>
-    </form>
-    <div id="afterlogin" class="hidden">
-      <div id="weather" class="absolute">
-        <span></span>
-        <span></span>
+    <div id="background">
+      <form id="login-form" class="hidden center">
+        <span id="hello">Hello, </span>
+        <input required maxlength="15" type="text" placeholder="What is your name?" />
+        <button></button>
+      </form>
+
+      <div id="afterlogin" class="hidden margin0 container">
+        <div id="leftblock" class="defaultBlockSize">
+          <div></div>
+        </div>
+        <div id="centerblock" class="defaultBlockSize">
+          <h1 id="clock" class="relative margin0 textcenter">00:00</h1>
+          <h1 id="greeting" class="relative margin0 textcenter"></h1>
+          <div id="weather" class="relative textcenter">
+            <span></span>
+          </div>
+        </div>
+        <div id="rightblock" class="defaultBlockSize">
+          <div id="todo" class="relative">
+            <form id="todo-form" class="margin0">
+              <input type="text" placeholder="Write a To Do and Press Enter" required />
+            </form>
+            <ul id="todo-list"></ul>
+          </div>
+        </div>
       </div>
-      <h1 id="greeting" class="relative inlineblock margin0"></h1>
-      <h1 id="clock" class="relative margin0">00:00</h2>
-      <div id="todo" class="relative">
-        <form id="todo-form" class="margin0">
-          <input type="text" placeholder="Write a To Do and Press Enter" required />
-        </form>
-        <ul id="todo-list"></ul>
-      </div>
-      <div id="quote" class="absolute textcenter">
-        <div></div>
-        <div></div>
+
+      <div id="quotes" class="hidden textcenter">
+        <span></span><br />
+        <span></span>
       </div>
     </div>
 
@@ -39,7 +48,7 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
-    <!-- <script src="js/weather.js"></script> -->
+    <script src="js/weather.js"></script>
     <script src="assets/json/quotes.json" type="text/javascript"></script>
   </body>
 </html>

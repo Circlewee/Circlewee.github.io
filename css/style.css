@@ -4,57 +4,62 @@
 @import "classes.css";
 @import "todo.css";
 @import "loginform.css";
-
-#afterlogin {
-  height: 100%;
-  width: 100%;
-  margin: 0px;
-}
+@import "quote.css";
 
 #weather {
-  top: 3%;
-  right: 5%;
+  font-size: 30px;
+  margin-top: 50px;
 }
 
 #greeting {
-  top: 3%;
-  left: 3%;
   font-size: 30px;
+  margin-top: 50px;
 }
 
 #clock {
-  top: 34%;
-  font-size: 80px;
-  margin-bottom: 30px;
+  font-size: 150px;
 }
 
-#quote {
-  top: 92%;
-  left: 50%;
-  transform: translate(-50%);
+#leftblock {
+
+}
+
+#centerblock {
+  
+}
+
+/* #rightblock {
+
+} */
+
+#background {
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: black;
+  background: url("../assets/img/3.jpg") no-repeat center center/cover;
+  opacity: 0.7;
+  /* 가상 요소 배경이 페이지 전체를 차지 */
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* 다른 html요소 뒤로 이동 */
+  /* 현재 z-index를 활성화하면 todo입력이 제한됌 */
+  /* z-index: -1; */
+}
+
+#background::after {
+  content: "";
+  z-index: -1;
 }
 
 /* background */
 body {
-  height: 97vh;
-  color: var(--default-font-color);
-  text-align: center;
-  margin: 0px;
-}
-
-body::after {
   height: 100vh;
   width: 100vw;
-  content: "";
-  background-color: black;
-  /* background: url("../assets/img/3.jpg") no-repeat center center/cover; */
-  opacity: 0.7;
-  /* 가상 요소 배경이 페이지 전체를 차지 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* 다른 html요소 뒤로 이동 */
-  z-index: -1;
+  color: var(--default-font-color);
+  margin: 0px;
 }
 
 input[type="text"] {
@@ -64,7 +69,7 @@ input[type="text"] {
   border-top: none;
   border-right: none;
   border-left: none;
-  border-bottom: 5px solid white;
+  border-bottom: 5px solid var(--default-font-color);
 }
 
 input[type="text"]::placeholder {

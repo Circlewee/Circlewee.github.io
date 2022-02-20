@@ -2,6 +2,13 @@
   font-size: 100px;
 }
 
+#login-form {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 #login-form input {
   height: 70px;
   font-size: 70px;
