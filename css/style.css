@@ -1,5 +1,7 @@
 @import "reset.css";
 @import "variables.css";
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @import "classes.css";
 @import "todo.css";
@@ -24,6 +26,7 @@ body {
   height: 100vh;
   width: 100vw;
   color: var(--default-font-color);
+  font-family: 'Nunito', 'NanumSquare', sans-serif;
   margin: 0px;
 }
 
