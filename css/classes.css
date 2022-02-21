@@ -6,6 +6,10 @@
   text-align: right;
 }
 
+.textcenterline {
+  text-decoration: line-through;
+}
+
 .hidden {
   visibility: hidden;
 }
