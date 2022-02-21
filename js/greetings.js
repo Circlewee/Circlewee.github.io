@@ -10,7 +10,7 @@ const USERNAME_KEY = "username";
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
 function loginSubmit(event) {
-  event.preventDefault(); //stop refresh
+  event.preventDefault();
   const inputUserName = loginForm[0].value; //#login-form input.value
 
   loginForm.classList.add(HIDDEN_CLASSNAME);
@@ -18,6 +18,7 @@ function loginSubmit(event) {
   paintGreetings(inputUserName);
 }
 
+// 인사말 출력, afterLogin, quotes 출력
 function paintGreetings(username) {
   greetingSpan.innerText = "Hello, " + username;
 
@@ -27,6 +28,7 @@ function paintGreetings(username) {
   logoutButton.addEventListener("click", logoutClicked);
 }
 
+// logoutButton 클릭 이벤트 함수
 function logoutClicked(event) {
   event.preventDefault();
 
