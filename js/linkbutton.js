@@ -17,10 +17,16 @@ const leftBlock = document.querySelector("#leftblock");
 
 function paintLink() {
   links.forEach((linkElement) => {
+    const linkIcon = document.createElement("span");
     const linkSpan = document.createElement("span");
-    linkSpan.classList.add("linkSpan", linkElement.name);
+    const linkDiv = document.createElement("div");
+
+    linkIcon.classList.add("linkIcon");
     linkSpan.innerText = `${linkElement.name}`;
-    leftBlock.appendChild(linkSpan);
+    linkDiv.classList.add("linkDiv", linkElement.name);
+    linkDiv.appendChild(linkIcon);
+    linkDiv.appendChild(linkSpan);
+    leftBlock.appendChild(linkDiv);
   });
 }
 
