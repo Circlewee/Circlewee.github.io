@@ -39,11 +39,14 @@
 }
 
 .linkIcon {
-  height: 32px;
-  width: 32px;
+  height: 20px;
+  width: 20px;
+  margin-top: auto;
   margin-right: 20px;
+  margin-bottom: auto;
   border: none;
   background: url( "../assets/img/linkicon.png" ) no-repeat;
+  background-size: cover;
   cursor: default;
 }
 
