@@ -12,6 +12,14 @@ const links = [
     name: "Github",
     link: `${HTTPS}github.com/Circlewee`,
   },
+  {
+    name: "Google",
+    link: `${HTTPS}google.com`,
+  },
+  {
+    name: "Twitch",
+    link: `${HTTPS}twitch.tv`,
+  },
 ];
 const leftBlock = document.querySelector("#leftblock");
 
