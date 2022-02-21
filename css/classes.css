@@ -23,10 +23,10 @@
   cursor: pointer;
 }
 
-.linkSpan{
-  font-size: 30px;
+.linkDiv {
+  font-size: 32px;
   border: none;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: var(--default-font-color);
   background-color: var(--inherit-color);
   display: flex;
@@ -34,8 +34,17 @@
   cursor: pointer;
 }
 
-.linkSpan:last-child{
+.linkDiv:last-child{
   margin-bottom: 0px;
+}
+
+.linkIcon {
+  height: 32px;
+  width: 32px;
+  margin-right: 20px;
+  border: none;
+  background: url( "../assets/img/linkicon.png" ) no-repeat;
+  cursor: default;
 }
 
 .container {
