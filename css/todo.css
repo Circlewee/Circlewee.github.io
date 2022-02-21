@@ -1,24 +1,35 @@
-#todo-list {
+.todo-list {
   padding: 0px;
 }
 
-#todo-list li {
-  margin-bottom: 5px;
+.todo-form input {
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  font-size: 20px;
 }
 
-#todo-list li:last-child{
+.todo-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
+  transition: all ease-out 1s;
+}
+
+.todo-list li:last-child{
   margin-bottom: 0px;
 }
 
-#todo-list li button {
+.todo-list li button {
   background-color: var(--inherit-color);
   border: none;
   margin-left: 8px;
   cursor: pointer;
 }
 
-#todo-form input {
-  padding-bottom: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
+.deleteButton {
+  opacity: 0;
+}
+
+.todo-list li:hover .deleteButton {
+  opacity: 1;
+  transition: ease-out 0.5s;
 }
