@@ -1,4 +1,5 @@
 :root {
   --default-font-color: white;
   --inherit-color: inherit;
+  cursor: default; 
 }
