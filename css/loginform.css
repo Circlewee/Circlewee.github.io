@@ -14,7 +14,7 @@
   font-size: 70px;
 }
 
-#login-form button {
+.loginButton {
   background: url("../assets/img/login.png") no-repeat;
   height: 50px;
   width: 50px;
@@ -23,4 +23,45 @@
   margin-left: 20px;
   background-size: cover;
   cursor: pointer;
+}
+
+.logoutButton {
+  height: 32px;
+  width: 32px;
+  padding: 0px;
+  border: none;
+  background: url( "../assets/img/logout.png" ) no-repeat;
+  cursor: pointer;
+}
+
+
+.logoutballon {
+  opacity: 0;
+  font-size: 18px;
+  height: 20px;
+  width: 80px;
+  padding: 10px 0px 10px 0px;
+  top: 48%;
+  left: 54%;
+  position: absolute;
+  background: #484848;
+  color: white;
+  border-radius: 5px;
+  /* transition: ease-out 0.3s; */
+}
+
+.logoutButton:hover ~ .logoutballon {
+  opacity: 1;
+  transition: ease-out 0.3s;
+}
+
+.logoutballon::after {
+  border-top: 10px solid #484848;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 13px;
 }

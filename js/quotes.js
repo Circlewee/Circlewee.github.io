@@ -33,5 +33,5 @@ if (!quotesClasslist.contains("hidden")) {
   const todayQuote = quotesList[Math.floor(Math.random() * quotesList.length)];
 
   quote.innerText = `"${todayQuote.quote}"`;
-  author.innerText = `- ${todayQuote.author}`;
+  author.innerText = `${todayQuote.author}`;
 }

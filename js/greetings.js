@@ -1,6 +1,6 @@
 const afterLogin = document.querySelector("#afterlogin");
 const loginForm = document.querySelector("#login-form");
-const greetingSpan = document.querySelector("#greeting span");
+const greetingSpan = document.querySelector("#greeting span:first-child");
 const quotes = document.querySelector("#quotes");
 const logoutButton = document.querySelector(".logoutButton");
 

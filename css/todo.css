@@ -27,9 +27,10 @@
 
 .deleteButton {
   opacity: 0;
+  transition: ease-out 0.3s;
 }
 
 .todo-list li:hover .deleteButton {
   opacity: 1;
-  transition: ease-out 0.5s;
+  transition: ease-out 0.3s;
 }
