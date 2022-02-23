@@ -9,7 +9,7 @@ function paintToDo(newToDo) {
   const btn = document.createElement("button");
   const modifyTodo = document.createElement("input");
 
-  modifyTodo.classList.add("modifyText", "hidden");
+  modifyTodo.classList.add("modifyText", CLASS_HIDDEN);
   li.id = newToDo.id;
   todo.innerText = newToDo.text;
   btn.innerText = "🍑";
@@ -27,9 +27,11 @@ function paintToDo(newToDo) {
 
 function updateTodo(event) {
   const clickedTodo = event.target;
-  const modifyText = clickedTodo.parentElement.children[1];
+  const parentDiv = clickedTodo.parentElement;
+  const modifyText = parentDiv.children[1];
 
-  modifyText.classList.remove("hidden");
+  parentDiv.children[2].classList.add(CLASS_HIDDEN);
+  modifyText.classList.remove(CLASS_HIDDEN);
   modifyText.value = clickedTodo.innerText;
 
   modifyText.addEventListener("keyup", (event) => {
@@ -41,8 +43,9 @@ function updateTodo(event) {
           element.text = modifyText.value;
         }
       });
-      modifyText.classList.add("hidden");
+      modifyText.classList.add(CLASS_HIDDEN);
       savingToDos();
+      parentDiv.children[2].classList.remove(CLASS_HIDDEN);
     }
   });
 }
@@ -77,6 +80,7 @@ const ToDoForm = document.querySelector(".todo-form");
 const ToDoInput = ToDoForm.querySelector("input");
 const ToDoList = document.querySelector(".todo-list");
 const TODOS_KEY = "ToDos";
+const CLASS_HIDDEN = "hidden";
 const savedToDos = localStorage.getItem(TODOS_KEY);
 
 let ToDos = [];
