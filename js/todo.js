@@ -30,9 +30,10 @@ function updateTodo(event) {
   const parentDiv = clickedTodo.parentElement;
   const modifyText = parentDiv.children[1];
 
-  parentDiv.children[2].classList.add(CLASS_HIDDEN);
-  modifyText.classList.remove(CLASS_HIDDEN);
   modifyText.value = clickedTodo.innerText;
+  parentDiv.children[2].classList.add(CLASS_HIDDEN);
+  clickedTodo.classList.add(CLASS_HIDDEN);
+  modifyText.classList.remove(CLASS_HIDDEN);
 
   modifyText.addEventListener("keyup", (event) => {
     if (event.keyCode === 13) {
@@ -46,6 +47,7 @@ function updateTodo(event) {
       modifyText.classList.add(CLASS_HIDDEN);
       savingToDos();
       parentDiv.children[2].classList.remove(CLASS_HIDDEN);
+      clickedTodo.classList.remove(CLASS_HIDDEN);
     }
   });
 }

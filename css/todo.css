@@ -55,5 +55,7 @@
   padding: 0px;
   border: none;
   border-radius: 5px;
+  color: var(--default-font-color);
+  background-color: var(--inherit-color);
   position: absolute;
 }
