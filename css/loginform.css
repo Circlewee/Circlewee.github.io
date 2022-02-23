@@ -10,8 +10,20 @@
 }
 
 #login-form input {
+  width: 300px;
+  color: var(--default-font-color);
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 5px solid var(--default-font-color);
   height: 70px;
   font-size: 70px;
+}
+
+#login-form input::placeholder {
+  color: var(--default-font-color);
+  font-size: 20px;
 }
 
 .loginButton {
@@ -22,7 +34,6 @@
   border: none;
   margin-left: 20px;
   background-size: cover;
-  cursor: pointer;
 }
 
 .logoutButton {
@@ -31,9 +42,7 @@
   padding: 0px;
   border: none;
   background: url( "../assets/img/logout.png" ) no-repeat;
-  cursor: pointer;
 }
-
 
 .logoutballon {
   opacity: 0;

@@ -31,17 +31,7 @@ body {
   margin: 0px;
 }
 
-input[type="text"] {
-  width: 300px;
-  color: var(--default-font-color);
-  background-color: transparent;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 5px solid var(--default-font-color);
-}
-
-input[type="text"]::placeholder {
-  color: var(--default-font-color);
-  font-size: 20px;
+button {
+  background-color: var(--inherit-color);
+  cursor: pointer;
 }

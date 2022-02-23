@@ -1,59 +1,54 @@
-const HTTPS = "https://";
-const links = [
-  {
-    name: "Naver",
-    link: `${HTTPS}www.naver.com`,
-    color: "#43dc00",
-  },
-  {
-    name: "Youtube",
-    link: `${HTTPS}www.youtube.com`,
-    color: "#ff0000",
-  },
-  {
-    name: "Github",
-    link: `${HTTPS}github.com/Circlewee`,
-    color: "#636363",
-  },
-  {
-    name: "Google",
-    link: `${HTTPS}google.com`,
-    color: "#4285f4",
-  },
-  {
-    name: "Twitch",
-    link: `${HTTPS}twitch.tv`,
-    color: "#9146ff",
-  },
-];
-const leftBlock = document.querySelector("#leftblock");
-
-function paintLink() {
-  links.forEach((linkElement) => {
-    const linkIcon = document.createElement("span");
-    const linkSpan = document.createElement("span");
-    const linkDiv = document.createElement("div");
-
-    linkIcon.classList.add("linkIcon");
-    linkSpan.innerText = `${linkElement.name}`;
-    linkDiv.classList.add("linkDiv", linkElement.name);
-    linkSpan.addEventListener("click", handleLinkButtonClick);
-    linkSpan.addEventListener("mouseenter", linkHover);
-    linkSpan.addEventListener("mouseleave", linknotHover);
-    linkDiv.appendChild(linkIcon);
-    linkDiv.appendChild(linkSpan);
-    leftBlock.appendChild(linkDiv);
-  });
+function savingLinks() {
+  localStorage.setItem(LINKS_KEY, JSON.stringify(links));
 }
 
+function paintLink(newLink) {
+  const leftBlock = document.querySelector("#leftblock");
+  const linkIcon = document.createElement("span");
+  const linkSpan = document.createElement("span");
+  const linkDiv = document.createElement("div");
+
+  linkIcon.classList.add("linkIcon");
+  linkSpan.innerText = `${newLink.name}`;
+  linkDiv.classList.add("linkDiv", newLink.name);
+  linkSpan.addEventListener("click", handleLinkButtonClick);
+  linkSpan.addEventListener("mouseenter", linkHover);
+  linkSpan.addEventListener("mouseleave", linknotHover);
+  linkDiv.appendChild(linkIcon);
+  linkDiv.appendChild(linkSpan);
+  leftBlock.appendChild(linkDiv);
+}
+
+// 링크 클릭 이벤트 처리 함수
 function handleLinkButtonClick(event) {
   links.forEach((linkElement) => {
     if (event.target.innerText === linkElement.name) {
-      window.location.href = linkElement.link;
+      window.location.href = linkElement.address;
     }
   });
 }
 
+// 새로운 링크 제출 이벤트 처리 함수
+function newLinkSubmit(event) {
+  event.preventDefault();
+
+  const newLink = {
+    name: newLinkInputForm[0].value,
+    address: `${HTTPS}` + newLinkInputForm[1].value,
+    color: newLinkInputForm[2].value,
+  };
+
+  newLinkInputForm[0].value = "";
+  newLinkInputForm[1].value = "";
+  newLinkInputForm[2].value = "";
+
+  addLinkButton.parentElement.children[1].classList.toggle("hidden");
+  links.push(newLink);
+  paintLink(newLink);
+  savingLinks();
+}
+
+//마우스가 링크에 들어올 때 이벤트
 function linkHover(event) {
   links.forEach((linkElement) => {
     if (event.target.innerText === linkElement.name) {
@@ -62,8 +57,28 @@ function linkHover(event) {
   });
 }
 
+// 마우스가 링크에서 나갈 때 이벤트
 function linknotHover(event) {
   event.target.style.color = "var(--default-font-color)";
 }
 
-paintLink();
+const LINKS_KEY = "links";
+const HTTPS = "https://";
+let links = [];
+const savedLinks = localStorage.getItem(LINKS_KEY);
+
+if (savedLinks) {
+  const parsedLinks = JSON.parse(savedLinks);
+  links = parsedLinks;
+  parsedLinks.forEach(paintLink);
+}
+
+// 새로운 링크 추가 버튼 이벤트 추가
+const addLinkButton = document.querySelector(".addLinkButton");
+addLinkButton.addEventListener("click", function () {
+  addLinkButton.parentElement.children[1].classList.toggle("hidden");
+});
+
+// 링크 추가 버튼 클릭 이벤트 추가
+const newLinkInputForm = document.querySelector(".newLinkInputForm");
+newLinkInputForm.addEventListener("submit", newLinkSubmit);

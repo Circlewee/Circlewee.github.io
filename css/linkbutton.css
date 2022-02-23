@@ -1,3 +1,12 @@
+@keyframes turn{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
 .linkDiv {
   font-size: 28px;
   border: none;
@@ -19,6 +28,52 @@
 .linkDiv span:last-child:hover {
   font-size: 32px;
   transition: ease-out 0.3s;
+}
+
+.addLinkButton {
+  height: 22px;
+  width: 22px;
+  left: 100%;
+  padding: 0px;
+  border: none;
+  background: url( "../assets/img/plus.png" ) no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.addLinkButton:hover {
+  animation: turn 0.3s linear infinite;
+}
+
+.newLinkInputScreen {
+  height: 200px;
+  width: 200px;
+  left: 34.5%;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.newLinkInputForm div{
+  font-size: 18px;
+  text-align: center;
+}
+
+.newLinkInputForm input{
+  text-align: center;
+  border: none;
+  border-bottom: 2px solid black;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.newLinkInputForm button{
+  border: none;
+  margin-top: 10px;
 }
 
 .linkIcon {
