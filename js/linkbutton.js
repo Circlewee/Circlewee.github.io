@@ -2,6 +2,7 @@ function savingLinks() {
   localStorage.setItem(LINKS_KEY, JSON.stringify(links));
 }
 
+// 화면에 link를 추가하는 함수
 function paintLink(newLink) {
   const leftBlock = document.querySelector("#leftblock");
   const linkIcon = document.createElement("span");
@@ -11,9 +12,13 @@ function paintLink(newLink) {
   linkIcon.classList.add("linkIcon");
   linkSpan.innerText = `${newLink.name}`;
   linkDiv.classList.add("linkDiv", newLink.name);
+  linkDiv.id = newLink.id;
+
+  linkIcon.addEventListener("click", deleteLink);
   linkSpan.addEventListener("click", handleLinkButtonClick);
   linkSpan.addEventListener("mouseenter", linkHover);
   linkSpan.addEventListener("mouseleave", linknotHover);
+
   linkDiv.appendChild(linkIcon);
   linkDiv.appendChild(linkSpan);
   leftBlock.appendChild(linkDiv);
@@ -33,6 +38,7 @@ function newLinkSubmit(event) {
   event.preventDefault();
 
   const newLink = {
+    id: Date.now(),
     name: newLinkInputForm[0].value,
     address: `${HTTPS}` + newLinkInputForm[1].value,
     color: newLinkInputForm[2].value,
@@ -60,6 +66,13 @@ function linkHover(event) {
 // 마우스가 링크에서 나갈 때 이벤트
 function linknotHover(event) {
   event.target.style.color = "var(--default-font-color)";
+}
+
+function deleteLink(event) {
+  const deleteLink = event.target.parentElement;
+  deleteLink.remove();
+  links = links.filter((link) => link.id !== parseInt(deleteLink.id));
+  savingLinks();
 }
 
 const LINKS_KEY = "links";

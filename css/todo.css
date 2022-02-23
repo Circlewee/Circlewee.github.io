@@ -21,7 +21,10 @@
 .todo-list li {
   font-size: 18px;
   margin-bottom: 10px;
-  transition: all ease-out 1s;
+}
+
+.todo-list div {
+  position: relative;
 }
 
 .todo-list li:last-child{
@@ -43,4 +46,14 @@
 .todo-list li:hover .deleteButton {
   opacity: 1;
   transition: ease-out 0.3s;
+}
+
+.modifyText {
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  padding: 0px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
 }

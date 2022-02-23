@@ -42,7 +42,7 @@
 }
 
 .addLinkButton:hover {
-  animation: turn 0.3s linear infinite;
+  animation: turn 0.3s linear;
 }
 
 .newLinkInputScreen {
