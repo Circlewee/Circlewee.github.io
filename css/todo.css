@@ -3,8 +3,18 @@
 }
 
 .todo-form input {
+  width: 300px;
+  color: var(--default-font-color);
+  background-color: transparent;
+  border: none;
+  border-bottom: 5px solid var(--default-font-color);
   padding-bottom: 10px;
   margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.todo-form input::placeholder {
+  color: var(--default-font-color);
   font-size: 20px;
 }
 
