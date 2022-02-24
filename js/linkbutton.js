@@ -11,7 +11,7 @@ function paintLink(newLink) {
 
   linkIcon.classList.add("linkIcon");
   linkSpan.innerText = `${newLink.name}`;
-  linkDiv.classList.add("linkDiv", newLink.name);
+  linkDiv.classList.add("linkDiv", replaceSpace(newLink.name));
   linkDiv.id = newLink.id;
 
   linkIcon.addEventListener("click", deleteLink);
@@ -73,6 +73,10 @@ function deleteLink(event) {
   deleteLink.remove();
   links = links.filter((link) => link.id !== parseInt(deleteLink.id));
   savingLinks();
+}
+
+function replaceSpace(linkName) {
+  return String(linkName).replace(/ /g, "_");
 }
 
 const LINKS_KEY = "links";
