@@ -15,7 +15,7 @@ function paintLink(newLink) {
   linkDiv.id = newLink.id;
 
   linkIcon.addEventListener("click", deleteLink);
-  linkSpan.addEventListener("click", handleLinkButtonClick);
+  linkSpan.addEventListener("mouseup", handleLinkButtonClick);
   linkSpan.addEventListener("mouseenter", linkHover);
   linkSpan.addEventListener("mouseleave", linknotHover);
 
@@ -26,11 +26,19 @@ function paintLink(newLink) {
 
 // 링크 클릭 이벤트 처리 함수
 function handleLinkButtonClick(event) {
-  links.forEach((linkElement) => {
-    if (event.target.innerText === linkElement.name) {
-      window.location.href = linkElement.address;
-    }
-  });
+  if (event.button === 0) {
+    links.forEach((linkElement) => {
+      if (event.target.innerText === linkElement.name) {
+        location = linkElement.address;
+      }
+    });
+  } else if (event.button === 1) {
+    links.forEach((linkElement) => {
+      if (event.target.innerText === linkElement.name) {
+        window.open(linkElement.address);
+      }
+    });
+  }
 }
 
 // 새로운 링크 제출 이벤트 처리 함수
