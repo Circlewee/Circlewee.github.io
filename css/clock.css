@@ -1,0 +1,8 @@
+#clock span:first-child{
+  font-size: 130px;
+}
+
+#clock span:last-child{
+  color: bisque;
+  font-size: 50px;
+}

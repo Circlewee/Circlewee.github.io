@@ -6,6 +6,7 @@
 
 @import "loginform.css";
 @import "linkbutton.css";
+@import "clock.css";
 @import "searchform.css";
 @import "todo.css";
 @import "quote.css";
@@ -18,10 +19,6 @@
 #greeting {
   font-size: 32px;
   margin-top: 50px;
-}
-
-#clock {
-  font-size: 130px;
 }
 
 body {

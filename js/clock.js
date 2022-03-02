@@ -1,11 +1,14 @@
-const clock = document.querySelector("#clock");
+const hour_minute = document.querySelector("#clock span:first-child");
+const seconds = document.querySelector("#clock span:last-child");
 
 function getClock() {
   const date = new Date();
-  const hours = makePadStyle(date.getHours());
-  const minutes = makePadStyle(date.getMinutes());
+  const nowHours = makePadStyle(date.getHours());
+  const nowMinutes = makePadStyle(date.getMinutes());
+  const nowSeconds = makePadStyle(date.getSeconds());
 
-  clock.innerText = `${hours}:${minutes}`;
+  hour_minute.innerText = `${nowHours}:${nowMinutes}`;
+  seconds.innerText = `${nowSeconds}`;
 }
 
 function makePadStyle(input) {
