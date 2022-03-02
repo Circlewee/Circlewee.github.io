@@ -62,7 +62,7 @@ function handleToDoSubmit(event) {
 
   const newToDo = {
     id: Date.now(),
-    text: ToDoInput.value,
+    text: ` ${ToDoInput.value} `,
   };
 
   ToDoInput.value = "";
@@ -76,7 +76,7 @@ function todoClicked(event) {
   const todoSpan = todoDiv.children[1];
 
   todoSpan.classList.toggle("textcenterline");
-  event.target.classList.toggle("indianred");
+  event.target.classList.toggle("buttonColor");
 }
 
 function deleteToDo(event) {

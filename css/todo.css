@@ -28,7 +28,7 @@
 .deleteButton {
   background-color: var(--inherit-color);
   border: none;
-  margin-left: 8px;
+  margin-left: 4px;
   cursor: pointer;
   opacity: 0;
   transition: ease-out 0.3s;
@@ -40,12 +40,14 @@
   padding: 0;
   border: 3px solid white;
   border-radius: 50%;
-  margin-right: 15px;
+  margin-right: 10px;
   background-color: white;
+  transition: ease-out 0.3s;
 }
 
-.indianred {
-  background-color: indianred;
+.buttonColor {
+  background-color: orangered;
+  transition: ease-out 0.3s;
 }
 
 .todo-list li:hover .deleteButton {
