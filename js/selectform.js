@@ -8,6 +8,8 @@ function handleSearch(event) {
     location = "https://search.naver.com/search.naver?query=" + value;
   } else if (engine === "Google") {
     location = "https://www.google.co.kr/search?q=" + value;
+  } else if (engine === "Youtube") {
+    location = "https://www.youtube.com/results?search_query=" + value;
   }
 
   selectform.querySelector("input").value = "";
