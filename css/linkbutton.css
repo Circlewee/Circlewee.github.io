@@ -55,7 +55,10 @@
   position: absolute;
   justify-content: center;
   align-items: center;
-  color: var(black);
+}
+
+.newLinkInputForm{
+  width: 82%;
 }
 
 .newLinkInputForm div{
@@ -64,11 +67,13 @@
 }
 
 .newLinkInputForm input{
-  font-size: 18px;
-  text-align: center;
+  width: 100%;
   border: none;
   margin-top: 5px;
   margin-bottom: 20px;
+  font-size: 18px;
+  font-family: inherit;
+  text-align: center;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
