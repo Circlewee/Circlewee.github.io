@@ -9,7 +9,7 @@
 @import "clock.css";
 @import "searchform.css";
 @import "todo.css";
-@import "quote.css";
+@import "quotes&setting.css";
 
 #weather {
   font-size: 30px;

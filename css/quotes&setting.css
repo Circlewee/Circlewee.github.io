@@ -9,3 +9,8 @@
 #quotes div:first-child {
   margin-bottom: 10px;
 }
+
+.backgroundSetting {
+  position: absolute;
+  background: url( "../assets/img/setting.png" ) no-repeat center/100%;
+}
