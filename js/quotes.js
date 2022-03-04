@@ -20,8 +20,8 @@ const quotesList = [
     author: "E.E.커밍스",
   },
   {
-    quote: "처음부터 겁먹지 마요. 막상 가보면 아무것도 아니니까.",
-    author: "김연아",
+    quote: "모든 것을 알고 있다고 생각하지말자.",
+    author: "",
   },
 ];
 
