@@ -10,6 +10,7 @@
 @import "searchform.css";
 @import "todo.css";
 @import "quotes&setting.css";
+@import "coloris.css";
 
 #weather {
   font-size: 30px;

@@ -1,8 +1,8 @@
-@keyframes turn{
-  0% {
+@keyframes turn90 {
+  from {
     transform: rotate(0deg);
   }
-  100% {
+  to {
     transform: rotate(90deg);
   }
 }
@@ -42,7 +42,7 @@
 }
 
 .addLinkButton:hover {
-  animation: turn 0.3s linear infinite;
+  animation: 0.4s turn90 2 alternate;
 }
 
 .newLinkInputScreen {

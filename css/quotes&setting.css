@@ -1,3 +1,12 @@
+@keyframes turn180 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
 #quotes {
   font-size: 19px;
   position: absolute;
@@ -11,6 +20,38 @@
 }
 
 .backgroundSetting {
+  height: 32px;
+  width: 32px;
+  top: 5%;
+  left: 3%;
+  border: none;
   position: absolute;
-  background: url( "../assets/img/setting.png" ) no-repeat center/100%;
+  background: url( "../assets/img/settings.png" ) no-repeat center/100%;
+}
+
+.backgroundSetting:hover {
+  animation: 0.4s turn180 2 alternate;
+}
+
+.colorPalette {
+  width: 200px;
+  height: 240px;
+  top: 9%;
+  left: 4.8%;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.coloris {
+  border: none;
+}
+
+.applybutton {
+  width: 55px;
+  height: 30px;
+  order: 2;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
 }
