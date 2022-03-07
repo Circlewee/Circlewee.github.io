@@ -1,9 +1,6 @@
 @import "reset.css";
 @import "variables.css";
 @import "classes.css";
-@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
 @import "loginform.css";
 @import "linkbutton.css";
 @import "clock.css";
@@ -11,6 +8,9 @@
 @import "todo.css";
 @import "quotes&setting.css";
 @import "coloris.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css");
 
 #weather {
   font-size: 30px;
