@@ -1,5 +1,4 @@
 function settingClick() {
-  const colorPaletteInput = colorPalette.children[0].children[1];
   const clrPicker = document.querySelector(".clr-picker");
   const applyButton = document.createElement("button");
 
@@ -42,6 +41,7 @@ function savingColor(color) {
 const background = document.body;
 const backgroundSettingButton = background.querySelector(".backgroundSetting");
 const colorPalette = document.querySelector(".colorPalette");
+const colorPaletteInput = colorPalette.children[0].children[1];
 const COLOR_KEY = "backgroundcolor";
 const defaultBackgroundColor = {
   r: 0,
