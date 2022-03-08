@@ -7,12 +7,16 @@
   }
 }
 
+#leftblock {
+  padding-right: 20px;
+}
+
 .linkDiv {
-  font-size: 28px;
-  border: none;
-  margin-bottom: 20px;
-  background-color: var(--inherit-color);
   display: flex;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 28px;
+  background-color: var(--inherit-color);
   justify-content: end;
 }
 
