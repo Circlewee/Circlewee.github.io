@@ -49,6 +49,8 @@ function onGeoOk(position) {
 
 function onGeoError() {
   alert("Can't fint you. No weather for you.");
+  const loadingIcon = document.querySelector(".loadingGif");
+  loadingIcon.remove();
 }
 
 function makePadStyle(input) {
