@@ -18,12 +18,13 @@
   border-left: none;
   border-bottom: 5px solid var(--default-font-color);
   height: 70px;
+  font-family: inherit;
   font-size: 70px;
 }
 
 #login-form input::placeholder {
   color: var(--default-font-color);
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .loginButton {

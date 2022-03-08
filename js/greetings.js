@@ -13,6 +13,7 @@ function loginSubmit(event) {
   event.preventDefault();
   const inputUserName = loginForm[0].value; //#login-form input.value
 
+  loginForm[0].value = "";
   loginForm.classList.add(HIDDEN_CLASSNAME);
   localStorage.setItem(USERNAME_KEY, inputUserName);
   paintGreetings(inputUserName);
