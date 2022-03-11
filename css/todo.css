@@ -1,5 +1,5 @@
 #rightblock {
-  padding-left: 20px;
+  padding-left: 140px;
 }
 
 .todo-list {
@@ -10,10 +10,10 @@
   width: 300px;
   color: var(--default-font-color);
   background-color: transparent;
-  border: none;
-  border-bottom: 5px solid var(--default-font-color);
   padding-bottom: 10px;
   margin-bottom: 15px;
+  border: none;
+  border-bottom: 5px solid var(--default-font-color);
   font-family: inherit;
   font-size: 20px;
 }

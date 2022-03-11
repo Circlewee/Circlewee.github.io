@@ -44,10 +44,15 @@
             <option value="Naver" selected>Naver</option>
             <option value="Google">Google</option>
             <option value="Youtube">Youtube</option>
-          <input type="text" />
+          <input type="text" maxlength="80" />
         </form>
         <div id="weather" class="textcenter">
           <span class="loadingGif"></span>
+          <div class="time hidden">
+            <button class="refreshbutton" type="button"></button>
+            <span></span>
+            <span>기준</span>
+          </div>
         </div>
       </div>
       <div id="rightblock" class="defaultBlockSize">

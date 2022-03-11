@@ -1,5 +1,5 @@
 .selectform {
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .selectform * {
@@ -7,7 +7,7 @@
 }
 
 .selectform select {
-  width: 120px;
+  width: 140px;
   background: url("../assets/img/underarrow.png") no-repeat 100%;
 
   -webkit-appearance: none;
@@ -25,18 +25,17 @@
 }
 
 .selectform input {
-  width: 300px;
-  font-size: 20px;
+  width: calc(100% - 158px);
 }
 
 .selectform input, .selectform select {
   line-height: var(--searchform-input-height);
-  padding: 0px 0px 0px 8px;
+  padding: 0px 0px 0px 18px;
   border-style: solid;
   border-width: 0px 0px 4px 0px;
   border-color: #fff;
   color: var(--default-font-color);
-  font-size: 20px;
+  font-size: 22px;
   vertical-align: middle;
   background-color: var(--inherit-color);
 }
